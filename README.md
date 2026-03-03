@@ -42,6 +42,12 @@ npm run dev
 
 App em `http://localhost:3000`.
 
+**Screenshots**
+
+![Interface](Screenshot_66.png)
+
+![Documentos](Screenshot_67.png)
+
 **API – prefixo `/api`**
 
 | Método | URL | Descrição |
