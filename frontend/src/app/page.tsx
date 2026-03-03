@@ -136,6 +136,7 @@ export default function Home() {
                 <div className="info">
                   <strong>{doc.titulo}</strong>
                   {doc.descricao && <span>{doc.descricao}</span>}
+                  {" "}
                   <small>
                     {new Date(doc.criado_em).toLocaleString("pt-BR")}
                   </small>
