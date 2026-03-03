@@ -1,9 +1,8 @@
 import "dotenv/config";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { prisma } from "./infra/database/prisma.js";
-import { PrismaDocumentoRepository } from "./infra/repositories/prisma-documento-repository.js";
-import { registerDocumentoRoutes } from "./infra/http/routes/documento-routes.js";
+import { PrismaDocumentoRepository } from "./infrastructure/repositories/prisma-documento-repository.js";
+import { registerDocumentoRoutes } from "./infrastructure/http/routes/documento-routes.js";
 
 const documentoRepository = new PrismaDocumentoRepository();
 

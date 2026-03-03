@@ -3,7 +3,7 @@ import type {
   DocumentoRepository,
   CreateDocumentoInput,
 } from "../../domain/documento-repository.js";
-import { prisma } from "../database/prisma.js";
+import { prisma } from "../database/connection.js";
 
 export class PrismaDocumentoRepository implements DocumentoRepository {
   async create(data: CreateDocumentoInput): Promise<Documento> {
