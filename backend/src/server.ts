@@ -12,7 +12,9 @@ async function build() {
 
   await app.register(cors, { origin: true });
 
-  await registerDocumentoRoutes(app, { documentoRepository });
+  await app.register(registerDocumentoRoutes, { prefix: "/api", documentoRepository });
+
+  console.log(app.printRoutes());
 
   return app;
 }
