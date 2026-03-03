@@ -22,7 +22,7 @@ export async function registerDocumentoRoutes(
   const atualizarStatus = new AtualizarStatusDocumentoUseCase(documentoRepository);
   const deletarDocumento = new DeletarDocumentoUseCase(documentoRepository);
 
-  // POST /documentos - Criar documento
+
   app.post<{
     Body: CreateDocumentoDTO;
   }>("/documentos", async (request, reply) => {
@@ -46,7 +46,7 @@ export async function registerDocumentoRoutes(
     }
   });
 
-  // GET /documentos - Listar documentos
+
   app.get("/documentos", async (_request, reply) => {
     try {
       const docs = await listarDocumentos.execute();
@@ -57,7 +57,6 @@ export async function registerDocumentoRoutes(
     }
   });
 
-  // PATCH /documentos/:id/status - Atualizar status
   app.patch<{
     Params: { id: string };
     Body: { status?: string };
@@ -83,7 +82,6 @@ export async function registerDocumentoRoutes(
     }
   });
 
-  // DELETE /documentos/:id - Deletar documento
   app.delete<{ Params: { id: string } }>("/documentos/:id", async (request, reply) => {
     try {
       const { id } = request.params;

@@ -1,7 +1,3 @@
-/**
- * DTOs para entrada/saída da API
- */
-
 export interface CreateDocumentoDTO {
   titulo: string;
   descricao?: string | null;
@@ -17,5 +13,5 @@ export interface DocumentoResponseDTO {
   titulo: string;
   descricao: string | null;
   status: string;
-  criado_em: string; // ISO 8601
+  criado_em: string; 
 }

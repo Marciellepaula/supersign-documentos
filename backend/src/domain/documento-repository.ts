@@ -9,11 +9,6 @@ export interface CreateDocumentoInput {
 export interface UpdateStatusInput {
   status: "pendente" | "assinado";
 }
-
-/**
- * Porta do repositório (interface de infraestrutura)
- * Domain não depende de Prisma
- */
 export interface DocumentoRepository {
   create(data: CreateDocumentoInput): Promise<Documento>;
   findAll(): Promise<Documento[]>;

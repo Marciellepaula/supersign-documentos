@@ -1,7 +1,3 @@
-/**
- * Entidade de domínio: Documento
- * Status válidos: pendente | assinado
- */
 export type DocumentoStatus = "pendente" | "assinado";
 
 export interface Documento {
