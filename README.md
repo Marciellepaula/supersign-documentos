@@ -32,7 +32,7 @@ API disponvel em `http://localhost:3001` (porta configur�vel via `PORT` no `.e
 Todos os endpoints estao sob o prefixo `/api`:
 
 
-| M�todo | URL                        | Descri��o                                       |
+| Metodo | URL                        | Descricão                                       |
 | ------ | -------------------------- | ----------------------------------------------- |
 | POST   | /api/documentos            | Criar documento                                 |
 | GET    | /api/documentos            | Listar documentos                               |
