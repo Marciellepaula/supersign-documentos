@@ -2,10 +2,21 @@
 
 API + frontend para criar, listar, atualizar status e excluir documentos. Backend em Node (Fastify + Prisma), front em Next.js.
 
-**Como rodar**
+**Requisitos:** Node 18+.
 
-- Postgres em pé (na raiz: `docker compose up -d`).
-- Node 18+.
+**Docker (PostgreSQL)**
+
+Na raiz do projeto tem um `docker-compose.yml` com Postgres 16. Sobe o banco assim:
+
+```bash
+docker compose up -d
+```
+
+- Container: `supersign-documentos-db`
+- Porta: `5434` (host) → 5432 (container)
+- Banco: `supersign_documentos`, usuário/senha: `postgres`/`postgres`
+
+O `.env.example` do backend já vem com uma URL para esse cenário. Se usar outro Postgres, ajuste o `DATABASE_URL`.
 
 **Backend**
 
