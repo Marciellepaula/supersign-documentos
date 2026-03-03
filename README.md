@@ -17,16 +17,15 @@ Teste técnico Full Stack: API (Node.js + Fastify + Prisma) e interface (Next.js
 ```bash
 cd backend
 cp .env.example .env
-# Edite .env e configure DATABASE_URL (PostgreSQL)
 
 npm install
-npx prisma generate
-npx prisma db push
+npm run db:generate
+npm run db:migrate
 
 npm run dev
 ```
 
-API disponível em `http://localhost:3000` (porta configurável via `PORT` no `.env`).
+API disponível em `http://localhost:3001` (porta configurável via `PORT` no `.env`).
 
 ### Endpoints
 
