@@ -46,7 +46,6 @@ App em `http://localhost:3000`.
 
 ![Interface](Screenshot_66.png)
 
-![Documentos](Screenshot_67.png)
 
 **API – prefixo `/api`**
 

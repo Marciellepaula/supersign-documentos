@@ -141,9 +141,12 @@ export default function Home() {
                     {new Date(doc.criado_em).toLocaleString("pt-BR")}
                   </small>
                 </div>
-                <div>
-                  <span className={`status ${doc.status}`}>{doc.status}</span>
+                <div className="doc-actions">
+                  <span className={`status-badge status-badge--${doc.status}`}>
+                    {doc.status === "assinado" ? "Assinado" : "Pendente"}
+                  </span>
                   <select
+                    className="status-select"
                     value={doc.status}
                     onChange={(e) => handleAlterarStatus(doc.id, e.target.value)}
                     aria-label="Alterar status"
@@ -153,7 +156,7 @@ export default function Home() {
                   </select>
                   <button
                     type="button"
-                    className="danger"
+                    className="btn btn--danger"
                     onClick={() => handleExcluir(doc.id)}
                   >
                     Excluir
