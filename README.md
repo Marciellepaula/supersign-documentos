@@ -10,7 +10,7 @@ Teste técnico Full Stack: API (Node.js + Fastify + Prisma) e interface (Next.js
 ## Pré-requisitos
 
 - Node.js 18+
-- PostgreSQL rodando localmente (ou via Docker)
+- PostgreSQL rodando localmente ou via Docker (`docker compose up -d` na raiz do projeto)
 
 ## Backend
 
@@ -26,16 +26,18 @@ npx prisma db push
 npm run dev
 ```
 
-API disponível em `http://localhost:3001`.
+API disponível em `http://localhost:3000` (porta configurável via `PORT` no `.env`).
 
 ### Endpoints
 
+Todos os endpoints estão sob o prefixo `/api`:
+
 | Método | URL | Descrição |
 |--------|-----|-----------|
-| POST | /documentos | Criar documento |
-| GET | /documentos | Listar documentos |
-| PATCH | /documentos/:id/status | Atualizar status (body: `{ "status": "pendente" \| "assinado" }`) |
-| DELETE | /documentos/:id | Deletar documento |
+| POST | /api/documentos | Criar documento |
+| GET | /api/documentos | Listar documentos |
+| PATCH | /api/documentos/:id/status | Atualizar status (body: `{ "status": "pendente" \| "assinado" }`) |
+| DELETE | /api/documentos/:id | Deletar documento |
 
 ### Testes
 
@@ -49,7 +51,6 @@ npm test
 ```bash
 cd frontend
 cp .env.example .env.local
-# Opcional: defina NEXT_PUBLIC_API_URL se a API não estiver em localhost:3001
 
 npm install
 npm run dev
